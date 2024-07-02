@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal Ice-Cubes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Pascal Ice-Cubes Logo">
+        </div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+            <ul>
+                <li><a href="{{ url_for('index') }}#home">Home</a></li>
+                <li><a href="{{ url_for('index') }}#about">About</a></li>
+                <li><a href="{{ url_for('index') }}#services">Services</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h1>Pascal Ice-Cubes</h1>
+            <p>Your Reliable Ice Supplier and Mobile Chiller/Freezer Rental</p>
+            <a href="{{ url_for('booking') }}"><button>Book Now</button></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We specialize in providing ice cubes and mobile freezer trailers for weddings, businesses, social events, and corporate events.</p>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Ice Cubes Supply</h3>
+            <p>We supply ice cubes for your business or event, ensuring quality and reliability.</p>
+        </div>
+        <div class="service">
+            <h3>Mobile Freezer Trailers</h3>
+            <p>Our mobile freezer trailers are perfect for keeping your goods cold at any event.</p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <h2>Book Our Services</h2>
+        <a href="{{ url_for('booking') }}"><button>Book Now</button></a>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact us at: 0631781147, 0733558687, 060899095</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Pascal Ice-Cubes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/booking.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Pascal Ice-Cubes Logo">
+        </div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+            <ul>
+                <li><a href="{{ url_for('index') }}#home">Home</a></li>
+                <li><a href="{{ url_for('index') }}#about">About</a></li>
+                <li><a href="{{ url_for('index') }}#services">Services</a></li>
+                <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero-booking">
+        <div class="hero-content">
+            <h1>Book Our Services</h1>
+            <p>Get the best ice cubes and mobile freezer trailers for your events. Fill out the form below to make a booking.</p>
+        </div>
+    </section>
+
+    <section id="booking">
+        <div class="container">
+            <h2>Booking Form</h2>
+            <form id="booking-form" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="ice-cubes">Ice Cubes Supply</option>
+                    <option value="freezer-trailers">Mobile Freezer Trailers</option>
+                </select>
+                
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="details">Additional Details:</label>
+                <textarea id="details" name="details"></textarea>
+                
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="alert"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <p>Contact us at: 0631781147, 0733558687, 060899095</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
